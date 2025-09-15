@@ -1,0 +1,24 @@
+{
+    "simulation": {
+        "rpc_url": "http://127.0.0.1:8545",
+        "chain_id": 31337,
+        "gas_limit": 30000000,
+        "gas_price": 20000000000,
+        "block_time": 12
+    },
+    "scenarios": {
+        "simple_transfers": {
+            "enabled": true,
+            "transfer_amounts": [1.0, 0.5, 0.1]
+        },
+        "batch_transfers": {
+            "enabled": true,
+            "batch_size": 5,
+            "amount_range": [0.1, 1.0]
+        },
+        "contract_deployment": {
+            "enabled": true,
+            "contracts": ["SimpleStorage", "ERC20Token"]
+        }
+    }
+}
